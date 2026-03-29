@@ -141,6 +141,10 @@ const translations = {
     'footer.copyright': '© 2026 Trust Visa USA. Todos los derechos reservados.',
     'footer.disclaimer': 'Trust Visa USA ofrece servicios de preparación de documentos y asesoría migratoria. No somos abogados y no brindamos asesoramiento legal. Para asesoría legal, consultá con un abogado de inmigración autorizado.',
 
+    'sec.media.badge': 'Videos &amp; Fotos',
+    'sec.media.title': 'Testimonios de Nuestros Clientes',
+    'sec.media.desc': 'Conocé las historias reales de personas que confiaron en Trust Visa USA para cumplir su sueño americano.',
+
     'wc.badge': '⚽ Oferta Especial · FIFA World Cup 2026™',
     'wc.title': '¡Los Albirroja van<br/>al <span class="wc-gold">Mundial 2026!</span>',
     'wc.sub': 'Paraguay jugará en <strong>California</strong> en junio de 2026. Conseguí tu visa B1/B2 a tiempo y viví la experiencia de ver a tu selección en la Copa del Mundo.',
@@ -300,6 +304,10 @@ const translations = {
     'footer.copyright': '© 2026 Trust Visa USA. Todos os direitos reservados.',
     'footer.disclaimer': 'A Trust Visa USA oferece serviços de preparação de documentos e assessoria migratória. Não somos advogados e não fornecemos aconselhamento jurídico. Para assessoria jurídica, consulte um advogado de imigração autorizado.',
 
+    'sec.media.badge': 'Vídeos &amp; Fotos',
+    'sec.media.title': 'Depoimentos dos Nossos Clientes',
+    'sec.media.desc': 'Conheça as histórias reais de pessoas que confiaram na Trust Visa USA para realizar seu sonho americano.',
+
     'wc.badge': '⚽ Oferta Especial · FIFA World Cup 2026™',
     'wc.title': 'O Paraguai vai<br/>à <span class="wc-gold">Copa do Mundo 2026!</span>',
     'wc.sub': 'O Paraguai jogará na <strong>Califórnia</strong> em junho de 2026. Consiga seu visto B1/B2 a tempo e viva a emoção de ver sua seleção na Copa do Mundo.',
@@ -457,6 +465,10 @@ const translations = {
     'footer.consult': 'Free Consultation',
     'footer.copyright': '© 2026 Trust Visa USA. All rights reserved.',
     'footer.disclaimer': 'Trust Visa USA provides document preparation assistance and immigration consulting services. We are not attorneys and do not provide legal advice. For legal advice, consult a licensed immigration attorney.',
+
+    'sec.media.badge': 'Videos &amp; Photos',
+    'sec.media.title': 'Client Testimonials',
+    'sec.media.desc': 'Meet the real people who trusted Trust Visa USA to make their American dream come true.',
 
     'wc.badge': '⚽ Special Offer · FIFA World Cup 2026™',
     'wc.title': 'Paraguay is going<br/>to the <span class="wc-gold">World Cup 2026!</span>',

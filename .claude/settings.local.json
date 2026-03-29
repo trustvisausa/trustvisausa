@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.visaparaturista.com)",
+      "mcp__Claude_Preview__preview_start",
+      "Read(//usr/local/**)",
+      "Read(//opt/homebrew/**)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(open \"/Users/rodrigoparedesacosta/Documents/Claude/Trust Visa USA website/index.html\")",
+      "Bash(git --version)",
+      "Bash(brew --version)",
+      "Bash(curl -sL https://cli.github.com/packages/githubcli-archive-keyring.gpg)",
+      "Read(//private/tmp/**)",
+      "Bash(unzip -q gh.zip)",
+      "Bash(cp /tmp/gh_2.67.0_macOS_arm64/bin/gh /usr/local/bin/gh)",
+      "Bash(sudo cp:*)",
+      "Bash(mkdir -p ~/bin)",
+      "Bash(cp /tmp/gh_2.67.0_macOS_arm64/bin/gh ~/bin/gh)",
+      "Bash(echo \"export PATH=\"\"$HOME/bin:$PATH\"\"\")",
+      "Bash(GH=/tmp/gh_2.67.0_macOS_arm64/bin/gh)",
+      "Bash($GH auth:*)",
+      "Bash(~/bin/gh auth:*)",
+      "Bash(~/bin/gh repo:*)"
+    ]
+  }
+}
