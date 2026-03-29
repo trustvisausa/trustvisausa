@@ -38,10 +38,11 @@ const translations = {
     'f1s.desc': '¿Querés estudiar en los Estados Unidos? Te guiamos en todo el proceso de visa F1, desde el I-20 hasta tu entrevista, para que llegues preparado y con confianza.',
     'f1s.list': '<li>Orientación para elegir institución</li><li>Guía para el formulario I-20</li><li>Pago del SEVIS fee</li><li>Coaching para la entrevista</li>',
 
+    'b1b2.feat': 'Especialidad',
     'f1a.feat': 'Especialidad',
-    'f1a.tag': 'F1 Deportista',
-    'f1a.title': 'Visa Estudiante-Deportista (F1)',
-    'f1a.desc': '¿Sos deportista con una beca o propuesta de programa deportivo en EE.UU.? Nos especializamos en visa F1 para atletas, coordinando con los requisitos de tu universidad y programa.',
+    'f1a.tag': 'F1 Atleta',
+    'f1a.title': 'Visa Estudiante-Atleta (F1)',
+    'f1a.desc': '¿Sos atleta con una beca o propuesta de programa deportivo en EE.UU.? Nos especializamos en visa F1 para atletas, coordinando con los requisitos de tu universidad y programa.',
     'f1a.list': '<li>Documentación del programa deportivo</li><li>Apoyo con carta de beca</li><li>Orientación NCAA / NAIA</li><li>Preparación completa para entrevista</li>',
 
     'j1.tag': 'J1',
@@ -93,7 +94,7 @@ const translations = {
     'test1.text': '"Estaba muy nerviosa por la entrevista de mi visa B2, pero Trust Visa USA me preparó para cada pregunta posible. ¡Me la aprobaron en el primer intento!"',
     'test1.service': 'Visa Turista B2 · Paraguay',
     'test2.text': '"Como deportista, el proceso de visa me parecía imposible. El equipo de Trust Visa USA sabía exactamente qué documentos pedía mi universidad y me guió en cada paso. ¡Obtuve mi F1 sin problemas!"',
-    'test2.service': 'Visa F1 Deportista · Asunción',
+    'test2.service': 'Visa F1 Atleta · Asunción',
     'test3.text': '"Mi marido es ciudadano americano y no sabíamos nada del proceso de AOS. Trust Visa USA lo manejó todo — ahora tengo mi green card y no podemos estar más felices."',
     'test3.service': 'Ajuste de Estatus · Argentina',
 
@@ -122,7 +123,7 @@ const translations = {
     'form.msg.ph': 'Describí brevemente tu situación — te ayudamos a encontrar el mejor camino.',
     'form.visa.b1b2': 'B1/B2 – Turista y Negocios',
     'form.visa.f1s': 'F1 – Visa de Estudiante',
-    'form.visa.f1a': 'F1 – Visa Estudiante-Deportista',
+    'form.visa.f1a': 'F1 – Visa Estudiante-Atleta',
     'form.visa.j1': 'J1 – Intercambio Cultural',
     'form.visa.aos': 'Ajuste de Estatus (Casamiento)',
     'form.visa.n400': 'N-400 – Naturalización',
@@ -195,6 +196,7 @@ const translations = {
     'f1s.desc': 'Quer estudar nos Estados Unidos? Orientamos você em todo o processo de visto F1, do I-20 até sua entrevista, para que chegue preparado e confiante.',
     'f1s.list': '<li>Orientação para escolha de instituição</li><li>Guia para o formulário I-20</li><li>Pagamento da taxa SEVIS</li><li>Coaching para a entrevista</li>',
 
+    'b1b2.feat': 'Especialidade',
     'f1a.feat': 'Especialidade',
     'f1a.tag': 'F1 Atleta',
     'f1a.title': 'Visto Estudante-Atleta (F1)',
@@ -280,6 +282,7 @@ const translations = {
     'form.visa.b1b2': 'B1/B2 – Turista e Negócios',
     'form.visa.f1s': 'F1 – Visto de Estudante',
     'form.visa.f1a': 'F1 – Visto Estudante-Atleta',
+
     'form.visa.j1': 'J1 – Intercâmbio Cultural',
     'form.visa.aos': 'Ajuste de Status (Casamento)',
     'form.visa.n400': 'N-400 – Naturalização',
@@ -352,6 +355,7 @@ const translations = {
     'f1s.desc': 'Ready to study in the United States? We guide you through the entire F1 visa process, from the I-20 to your interview, so you arrive prepared and confident.',
     'f1s.list': '<li>School/program selection guidance</li><li>I-20 form assistance</li><li>SEVIS fee payment</li><li>Interview coaching</li>',
 
+    'b1b2.feat': 'Specialty',
     'f1a.feat': 'Specialty',
     'f1a.tag': 'F1 Athlete',
     'f1a.title': 'Student-Athlete Visa (F1)',
