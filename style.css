@@ -26,11 +26,14 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Jost', sans-serif;
+  font-size: 17px;
   color: var(--gray-800);
   background: var(--white);
-  line-height: 1.6;
+  line-height: 1.65;
   overflow-x: hidden;
+  font-feature-settings: "kern" 1;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container {
@@ -43,9 +46,14 @@ img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 
 /* ===== TYPOGRAPHY ===== */
-h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.1; }
-h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; line-height: 1.2; }
-h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.3; }
+h1, h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -0.02em;
+}
+h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 700; line-height: 1.08; }
+h2 { font-size: clamp(1.9rem, 3vw, 2.8rem); font-weight: 700; line-height: 1.15; }
+h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.3; letter-spacing: 0.01em; }
+p { font-size: 1rem; }
 
 /* ===== BUTTONS ===== */
 .btn {
@@ -223,7 +231,7 @@ h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.3; }
   border-radius: 50px;
   cursor: pointer;
   transition: var(--transition);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 .lang-btn:hover:not(.active) {
   color: var(--navy);
@@ -352,6 +360,9 @@ h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.3; }
 .stat strong { color: var(--white); font-size: 1.8rem; font-weight: 800; line-height: 1; }
 .stat span { color: rgba(255,255,255,0.55); font-size: 0.8rem; margin-top: 4px; }
 .stat-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.2); }
+.stat.stat-single { flex-direction: row; align-items: center; gap: 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 50px; padding: 12px 24px; }
+.stat.stat-single strong { font-size: 2rem; white-space: nowrap; }
+.stat.stat-single span { font-size: 0.85rem; margin-top: 0; max-width: 280px; line-height: 1.4; }
 
 .hero-scroll-indicator {
   position: absolute;
@@ -508,123 +519,111 @@ h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.3; }
   box-shadow: 0 8px 28px rgba(255,215,0,0.4);
 }
 
-/* VISUAL SIDE */
+/* VISUAL SIDE — TEAMS GRID */
 .wc-visual {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: center;
+  position: relative;
 }
 
-/* Flag card */
-.wc-flag-card {
+.wc-teams-header {
+  color: #FFD700;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255,215,0,0.25);
+}
+
+.wc-teams-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.wc-team-card {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.12);
-  border-radius: var(--radius);
-  padding: 20px;
+  border-radius: 10px;
+  padding: 12px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 6px;
   transition: var(--transition);
+  cursor: default;
 }
-.wc-flag-card:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-3px); }
-
-.wc-flag {
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-  border: 2px solid rgba(255,255,255,0.2);
-  aspect-ratio: 3/2;
-  display: flex;
-  flex-direction: column;
+.wc-team-card:hover { background: rgba(255,255,255,0.11); transform: translateY(-2px); }
+.wc-team-card.wc-team-featured {
+  border-color: rgba(255,215,0,0.5);
+  background: rgba(255,215,0,0.08);
 }
-.wc-flag-red   { flex: 1; background: #D52B1E; }
-.wc-flag-white { flex: 1; background: #f8f8f8; display: flex; align-items: center; justify-content: center; }
-.wc-flag-blue  { flex: 1; background: #0038A8; }
-.wc-coa { width: 50px; height: auto; }
-.wc-flag-label {
-  color: rgba(255,255,255,0.85);
-  font-size: 0.85rem;
+.wc-team-flag { font-size: 2rem; line-height: 1; }
+.wc-team-name {
+  color: rgba(255,255,255,0.88);
+  font-size: 0.72rem;
   font-weight: 600;
   text-align: center;
+  line-height: 1.2;
 }
 
-/* Player card */
-.wc-player-card {
-  background: linear-gradient(160deg, #1a3a6b 0%, #0d1b3e 100%);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: var(--radius);
-  overflow: hidden;
+/* Soccer ball decoration */
+.wc-ball-deco {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 220px;
+  height: 220px;
+  pointer-events: none;
+  opacity: 0.6;
+  animation: wc-spin 30s linear infinite;
+}
+@keyframes wc-spin { from { transform: translateY(-50%) rotate(0deg); } to { transform: translateY(-50%) rotate(360deg); } }
+
+/* Facts strip */
+.wc-facts-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,215,0,0.08);
+  border: 1px solid rgba(255,215,0,0.22);
+  border-radius: 12px;
+  padding: 14px 20px;
+  gap: 8px;
+}
+.wc-fact {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: var(--transition);
+  gap: 2px;
+  flex: 1;
 }
-.wc-player-card:hover { border-color: rgba(213,43,30,0.5); transform: translateY(-3px); }
-.wc-player-svg { width: 100%; height: auto; display: block; }
-.wc-player-label {
-  color: rgba(255,255,255,0.85);
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-align: center;
-  padding: 10px;
-  background: rgba(0,0,0,0.2);
-  width: 100%;
-}
+.wc-fact-icon { font-size: 1.2rem; line-height: 1; }
+.wc-fact strong { color: #FFD700; font-size: 1.3rem; font-weight: 800; line-height: 1.1; }
+.wc-fact span { color: rgba(255,255,255,0.65); font-size: 0.7rem; font-weight: 500; text-align: center; }
+.wc-fact-sep { width: 1px; height: 36px; background: rgba(255,215,0,0.2); flex-shrink: 0; }
 
-/* Trophy/California card */
-.wc-trophy-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,215,0,0.2);
-  border-radius: var(--radius);
-  overflow: hidden;
+.wc-teams-footer {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  transition: var(--transition);
+  justify-content: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.8rem;
+  font-weight: 500;
 }
-.wc-trophy-card:hover { border-color: rgba(255,215,0,0.45); transform: translateY(-3px); }
-.wc-trophy-svg { width: 100%; height: auto; display: block; }
-.wc-trophy-label {
-  color: rgba(255,255,255,0.85);
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-align: center;
-  padding: 10px;
-  background: rgba(0,0,0,0.2);
-  width: 100%;
-}
-
-/* Fans card */
-.wc-fans-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: var(--radius);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: var(--transition);
-}
-.wc-fans-card:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-3px); }
-.wc-fans-svg { width: 100%; height: auto; display: block; }
-.wc-fans-label {
-  color: rgba(255,255,255,0.85);
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-align: center;
-  padding: 10px;
-  background: rgba(0,0,0,0.2);
-  width: 100%;
-}
+.wc-trophy-icon { font-size: 1.1rem; }
 
 @media (max-width: 1024px) {
   .wc-inner { grid-template-columns: 1fr; gap: 40px; }
-  .wc-visual { grid-template-columns: repeat(4, 1fr); }
+  .wc-teams-grid { grid-template-columns: repeat(6, 1fr); }
 }
 @media (max-width: 768px) {
-  .wc-visual { grid-template-columns: repeat(2, 1fr); }
+  .wc-teams-grid { grid-template-columns: repeat(4, 1fr); }
   .worldcup { padding: 60px 0; }
 }
 
@@ -885,6 +884,22 @@ h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.3; }
 
 .why-feature strong { color: var(--navy); display: block; margin-bottom: 3px; font-size: 0.95rem; }
 .why-feature p { color: var(--gray-600); font-size: 0.88rem; margin: 0; }
+
+/* WHY CREDENTIAL */
+.why-credential {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--white);
+  border: 2px solid var(--navy);
+  border-left: 5px solid var(--red);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-top: 8px;
+}
+.why-credential-icon { font-size: 2rem; line-height: 1; flex-shrink: 0; }
+.why-credential strong { color: var(--navy); display: block; margin-bottom: 6px; font-size: 0.97rem; line-height: 1.4; }
+.why-credential p { color: var(--gray-600); font-size: 0.88rem; margin: 0; line-height: 1.6; }
 
 /* WHY IMAGE */
 .why-image { position: relative; }
@@ -1161,7 +1176,7 @@ h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.3; }
   border: 1.5px solid var(--gray-200);
   border-radius: var(--radius-sm);
   font-size: 0.93rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Jost', sans-serif;
   color: var(--gray-800);
   background: var(--white);
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -1181,6 +1196,16 @@ h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.3; }
   font-size: 0.78rem;
   color: var(--gray-400);
 }
+.form-feedback {
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-align: center;
+}
+.form-success { background: #ECFDF5; color: #166534; border: 1px solid #BBF7D0; }
+.form-error   { background: #FFF1F2; color: #9F1239; border: 1px solid #FECDD3; }
+#formSubmitBtn:disabled { opacity: 0.65; cursor: not-allowed; }
 
 /* ===== FOOTER ===== */
 .footer {
@@ -1212,6 +1237,78 @@ h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.3; }
 .footer-bottom .container { display: flex; flex-direction: column; gap: 8px; }
 .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
 .disclaimer { font-size: 0.73rem !important; max-width: 720px; line-height: 1.6; }
+
+/* ===== WORLD CUP FLOAT ===== */
+.wc-float {
+  position: fixed;
+  bottom: 28px;
+  right: 100px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 0 0 0 rgba(255,215,0,0.7);
+  animation: wc-glow-pulse 2.2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.wc-float-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: wc-shimmer 2.5s linear infinite;
+  border-radius: 50px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.wc-float-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 60%, #FFD700 100%);
+  padding: 11px 18px 11px 14px;
+  border-radius: 50px;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+.wc-float-ball { font-size: 1.5rem; line-height: 1; flex-shrink: 0; }
+
+.wc-float-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.wc-float-text strong {
+  color: var(--navy);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.wc-float-text span {
+  color: var(--navy-dark);
+  font-size: 0.7rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.wc-float:hover { animation-play-state: paused; transform: scale(1.04); }
+
+@keyframes wc-glow-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(255,215,0,0.75), 0 6px 24px rgba(255,165,0,0.5); }
+  50%  { box-shadow: 0 0 0 10px rgba(255,215,0,0), 0 6px 32px rgba(255,165,0,0.7); }
+  100% { box-shadow: 0 0 0 0 rgba(255,215,0,0), 0 6px 24px rgba(255,165,0,0.5); }
+}
+@keyframes wc-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
 
 /* ===== WHATSAPP FLOAT ===== */
 .whatsapp-float {
@@ -1312,6 +1409,11 @@ h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.3; }
 
   .whatsapp-float { bottom: 20px; right: 16px; width: 52px; height: 52px; }
   .whatsapp-float svg { width: 26px; height: 26px; }
+  .wc-float { bottom: 20px; right: 80px; }
+  .wc-float-inner { padding: 9px 14px 9px 11px; gap: 8px; }
+  .wc-float-ball { font-size: 1.2rem; }
+  .wc-float-text strong { font-size: 0.7rem; }
+  .wc-float-text span { font-size: 0.63rem; }
 }
 
 @media (max-width: 540px) {

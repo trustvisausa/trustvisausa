@@ -7,14 +7,12 @@ const translations = {
     'nav.contact': 'Contacto',
     'nav.cta': 'Consulta Gratuita',
 
-    'hero.badge': 'Especialistas en Visas USA · Paraguay &amp; Latinoamérica',
+    'hero.badge': 'Especialistas en <strong>Visas Americanas</strong> · Latinoamérica',
     'hero.title': 'Tu Camino a los<br/><span class="highlight">Estados Unidos</span><br/>Empieza Aquí',
     'hero.sub': 'Te acompañamos en cada paso del proceso de visa con profesionalismo, atención personalizada y resultados reales. Desde visa de turista hasta residencia permanente — estamos contigo.',
     'hero.cta1': 'Consulta Gratuita',
     'hero.cta2': 'Ver Servicios',
-    'hero.stat1': 'Casos Exitosos',
-    'hero.stat2': 'Tasa de Aprobación',
-    'hero.stat3': 'Años de Experiencia',
+    'hero.stat1': 'Años trabajando en Estudios Jurídicos de Inmigración en EE.UU.',
     'hero.scroll': 'Ver más',
 
     'countries.label': 'Atendemos clientes desde',
@@ -45,10 +43,10 @@ const translations = {
     'f1a.desc': '¿Sos atleta con una beca o propuesta de programa deportivo en EE.UU.? Nos especializamos en visa F1 para atletas, coordinando con los requisitos de tu universidad y programa.',
     'f1a.list': '<li>Documentación del programa deportivo</li><li>Apoyo con carta de beca</li><li>Orientación NCAA / NAIA</li><li>Preparación completa para entrevista</li>',
 
-    'j1.tag': 'J1',
-    'j1.title': 'Visa de Intercambio (J1)',
-    'j1.desc': 'Para pasantes, au pairs, investigadores y participantes de intercambio cultural. Te ayudamos a navegar el proceso de visa J1 y conectarte con los requisitos del programa patrocinador.',
-    'j1.list': '<li>Coordinación con el patrocinador</li><li>Guía para el formulario DS-2019</li><li>Asistencia con el SEVIS fee</li><li>Revisión de elegibilidad para waiver</li>',
+    'i130.tag': 'I-130',
+    'i130.title': 'Petición I-130 (Familiar)',
+    'i130.desc': '¿Tenés un familiar ciudadano o residente permanente de EE.UU. que quiere peticionarte? Te guiamos en todo el proceso de la petición I-130 para reunificación familiar.',
+    'i130.list': '<li>Preparación y revisión del formulario I-130</li><li>Documentación de relación familiar</li><li>Seguimiento del caso ante USCIS</li><li>Coordinación con proceso consular</li>',
 
     'aos.tag': 'AOS',
     'aos.title': 'Ajuste de Estatus (Casamiento)',
@@ -86,8 +84,10 @@ const translations = {
     'why.f3.desc': 'Comunicate con nosotros en cualquier momento — siempre a un mensaje de distancia.',
     'why.f4.title': 'Acompañamiento Completo',
     'why.f4.desc': 'Desde tu primera pregunta hasta la visa en mano, estamos con vos.',
-    'why.stat1': 'Visas Aprobadas',
-    'why.stat2': 'Tasa de Aprobación',
+    'why.cred.title': 'Paraguayos con Experiencia en Immigration Law Firms de EE.UU.',
+    'why.cred.desc': 'Nuestro equipo es paraguayo y trabajó directamente dentro de estudios jurídicos de inmigración en Estados Unidos. Conocemos el sistema desde adentro — y eso hace toda la diferencia para vos.',
+    'why.stat1': 'Años en Law Firms de Inmigración',
+    'why.stat2': 'Equipo Paraguayo',
 
     'sec.test.badge': 'Historias Reales',
     'sec.test.title': 'Lo Que Dicen Nuestros Clientes',
@@ -104,7 +104,7 @@ const translations = {
     'cont.wa.title': 'WhatsApp',
     'cont.wa.sub': 'Escribinos en cualquier momento',
     'cont.email.title': 'Email',
-    'cont.phone.title': 'Teléfono / Paraguay',
+    'cont.phone.title': 'Teléfono / EE.UU.',
 
     'form.name.label': 'Nombre Completo',
     'form.email.label': 'Email',
@@ -114,17 +114,18 @@ const translations = {
     'form.msg.label': 'Contanos tu caso',
     'form.btn': 'Enviar Mensaje &rarr;',
     'form.disclaimer': 'Tu información es 100% confidencial y nunca será compartida con terceros.',
-    'form.success': '✓ ¡Mensaje enviado!',
+    'form.success': '¡Mensaje enviado! Te contactamos pronto.',
+    'form.error': 'Hubo un error. Escribinos directo al WhatsApp.',
     'form.name.ph': 'Tu nombre completo',
     'form.email.ph': 'tu@email.com',
-    'form.phone.ph': '+595 972 224720',
+    'form.phone.ph': '+1 (303) 434-3224',
     'form.country.ph': 'Seleccioná tu país',
     'form.visa.ph': 'Seleccioná un tipo de visa',
     'form.msg.ph': 'Describí brevemente tu situación — te ayudamos a encontrar el mejor camino.',
     'form.visa.b1b2': 'B1/B2 – Turista y Negocios',
     'form.visa.f1s': 'F1 – Visa de Estudiante',
     'form.visa.f1a': 'F1 – Visa Estudiante-Atleta',
-    'form.visa.j1': 'J1 – Intercambio Cultural',
+    'form.visa.i130': 'I-130 – Petición Familiar',
     'form.visa.aos': 'Ajuste de Estatus (Casamiento)',
     'form.visa.n400': 'N-400 – Naturalización',
     'form.visa.other': 'Otro / No sé cuál',
@@ -146,20 +147,21 @@ const translations = {
     'sec.media.desc': 'Conocé las historias reales de personas que confiaron en Trust Visa USA para cumplir su sueño americano.',
 
     'wc.badge': '⚽ Oferta Especial · FIFA World Cup 2026™',
-    'wc.title': '¡Los Albirroja van<br/>al <span class="wc-gold">Mundial 2026!</span>',
-    'wc.sub': 'Paraguay jugará en <strong>California</strong> en junio de 2026. Conseguí tu visa B1/B2 a tiempo y viví la experiencia de ver a tu selección en la Copa del Mundo.',
-    'wc.loc.title': 'California, EE.UU.',
-    'wc.loc.sub': 'Los Ángeles &amp; alrededores',
+    'wc.title': '¡Te Llevamos al <span class="wc-gold">Mundial 2026</span><br/>a Alentar a Tu Selección!',
+    'wc.sub': 'Las mejores selecciones de América jugarán en <strong>Estados Unidos</strong> en 2026. Conseguí tu visa B1/B2 a tiempo y viví la experiencia de alentar a tu equipo en la Copa del Mundo.',
+    'wc.loc.title': 'EE.UU. — 16 Ciudades',
+    'wc.loc.sub': 'Nueva York, Los Ángeles, Miami y más',
     'wc.date.title': 'Junio 2026',
-    'wc.date.sub': 'Fase de grupos del Mundial',
+    'wc.date.sub': '48 selecciones · 104 partidos',
     'wc.proc.title': 'Procesamiento Urgente',
     'wc.proc.sub': 'Citas disponibles ahora',
     'wc.offer.badge': '⭐ OFERTA ESPECIAL MUNDIAL 2026',
-    'wc.offer.text': 'Visa B1/B2 con procesamiento prioritario para hinchas paraguayos. Incluye preparación de documentos, simulacro de entrevista y seguimiento personalizado hasta tu aprobación.',
+    'wc.offer.text': 'Visa B1/B2 con procesamiento prioritario para hinchas de toda América. Incluye preparación de documentos, simulacro de entrevista y seguimiento personalizado hasta tu aprobación.',
     'wc.cta': 'Quiero mi visa para el Mundial →',
-    'wc.player.label': '🏆 Paraguay · Mundial 2026',
-    'wc.ca.label': '☀️ California, Junio 2026',
-    'wc.fans.label': '🎉 Hinchas Albirroja',
+    'wc.teams.title': '🌎 Selecciones de América · Mundial 2026',
+    'wc.teams.sub': 'EE.UU. · Canadá · México — Junio/Julio 2026',
+    'wc.fact1': 'Selecciones', 'wc.fact2': 'Estadios', 'wc.fact3': 'Partidos', 'wc.fact4': 'Países Sede',
+    'wcfloat.title': 'Oferta Especial', 'wcfloat.sub': 'FIFA World Cup 2026™',
   },
 
   pt: {
@@ -169,14 +171,12 @@ const translations = {
     'nav.contact': 'Contato',
     'nav.cta': 'Consultoria Gratuita',
 
-    'hero.badge': 'Especialistas em Vistos USA · Paraguai &amp; América Latina',
+    'hero.badge': 'Especialistas em <strong>Vistos Americanos</strong> · América Latina',
     'hero.title': 'Seu Caminho para os<br/><span class="highlight">Estados Unidos</span><br/>Começa Aqui',
     'hero.sub': 'Acompanhamos você em cada etapa do processo de visto com profissionalismo, atendimento personalizado e resultados reais. Do visto de turista à residência permanente — estamos com você.',
     'hero.cta1': 'Consultoria Gratuita',
     'hero.cta2': 'Ver Serviços',
-    'hero.stat1': 'Casos de Sucesso',
-    'hero.stat2': 'Taxa de Aprovação',
-    'hero.stat3': 'Anos de Experiência',
+    'hero.stat1': 'Anos trabalhando em Escritórios Jurídicos de Imigração nos EUA',
     'hero.scroll': 'Ver mais',
 
     'countries.label': 'Atendemos clientes de',
@@ -207,10 +207,10 @@ const translations = {
     'f1a.desc': 'É atleta com uma bolsa ou proposta de programa esportivo nos EUA? Somos especializados em visto F1 para atletas, coordenando com os requisitos da sua universidade e programa.',
     'f1a.list': '<li>Documentação do programa esportivo</li><li>Suporte com carta de bolsa</li><li>Orientação NCAA / NAIA</li><li>Preparação completa para entrevista</li>',
 
-    'j1.tag': 'J1',
-    'j1.title': 'Visto de Intercâmbio (J1)',
-    'j1.desc': 'Para estagiários, au pairs, pesquisadores e participantes de intercâmbio cultural. Ajudamos você a navegar o processo de visto J1 e a atender aos requisitos do programa patrocinador.',
-    'j1.list': '<li>Coordenação com o patrocinador</li><li>Guia para o formulário DS-2019</li><li>Assistência com a taxa SEVIS</li><li>Verificação de elegibilidade para waiver</li>',
+    'i130.tag': 'I-130',
+    'i130.title': 'Petição I-130 (Familiar)',
+    'i130.desc': 'Tem um familiar cidadão americano ou residente permanente que quer peticionar por você? Guiamos em todo o processo da petição I-130 para reunificação familiar.',
+    'i130.list': '<li>Preparação e revisão do formulário I-130</li><li>Documentação de relação familiar</li><li>Acompanhamento do caso no USCIS</li><li>Coordenação com processo consular</li>',
 
     'aos.tag': 'AOS',
     'aos.title': 'Ajuste de Status (Casamento)',
@@ -248,8 +248,10 @@ const translations = {
     'why.f3.desc': 'Entre em contato conosco a qualquer momento — sempre a uma mensagem de distância.',
     'why.f4.title': 'Acompanhamento Completo',
     'why.f4.desc': 'Da sua primeira pergunta até o visto em mãos, estamos com você.',
-    'why.stat1': 'Vistos Aprovados',
-    'why.stat2': 'Taxa de Aprovação',
+    'why.cred.title': 'Paraguaios com Experiência em Immigration Law Firms dos EUA',
+    'why.cred.desc': 'Nossa equipe é paraguaia e trabalhou diretamente dentro de escritórios jurídicos de imigração nos Estados Unidos. Conhecemos o sistema por dentro — e isso faz toda a diferença para você.',
+    'why.stat1': 'Anos em Law Firms de Imigração',
+    'why.stat2': 'Equipe Paraguaia',
 
     'sec.test.badge': 'Histórias Reais',
     'sec.test.title': 'O Que Dizem Nossos Clientes',
@@ -266,7 +268,7 @@ const translations = {
     'cont.wa.title': 'WhatsApp',
     'cont.wa.sub': 'Escreva para nós a qualquer momento',
     'cont.email.title': 'Email',
-    'cont.phone.title': 'Telefone / Paraguai',
+    'cont.phone.title': 'Telefone / EUA',
 
     'form.name.label': 'Nome Completo',
     'form.email.label': 'Email',
@@ -276,10 +278,11 @@ const translations = {
     'form.msg.label': 'Conte-nos seu caso',
     'form.btn': 'Enviar Mensagem &rarr;',
     'form.disclaimer': 'Suas informações são 100% confidenciais e nunca serão compartilhadas com terceiros.',
-    'form.success': '✓ Mensagem enviada!',
+    'form.success': 'Mensagem enviada! Entraremos em contato em breve.',
+    'form.error': 'Ocorreu um erro. Fale conosco pelo WhatsApp.',
     'form.name.ph': 'Seu nome completo',
     'form.email.ph': 'seu@email.com',
-    'form.phone.ph': '+595 972 224720',
+    'form.phone.ph': '+1 (303) 434-3224',
     'form.country.ph': 'Selecione seu país',
     'form.visa.ph': 'Selecione um tipo de visto',
     'form.msg.ph': 'Descreva brevemente sua situação — vamos ajudá-lo a encontrar o melhor caminho.',
@@ -287,7 +290,7 @@ const translations = {
     'form.visa.f1s': 'F1 – Visto de Estudante',
     'form.visa.f1a': 'F1 – Visto Estudante-Atleta',
 
-    'form.visa.j1': 'J1 – Intercâmbio Cultural',
+    'form.visa.i130': 'I-130 – Petição Familiar',
     'form.visa.aos': 'Ajuste de Status (Casamento)',
     'form.visa.n400': 'N-400 – Naturalização',
     'form.visa.other': 'Outro / Não sei qual',
@@ -309,20 +312,21 @@ const translations = {
     'sec.media.desc': 'Conheça as histórias reais de pessoas que confiaram na Trust Visa USA para realizar seu sonho americano.',
 
     'wc.badge': '⚽ Oferta Especial · FIFA World Cup 2026™',
-    'wc.title': 'O Paraguai vai<br/>à <span class="wc-gold">Copa do Mundo 2026!</span>',
-    'wc.sub': 'O Paraguai jogará na <strong>Califórnia</strong> em junho de 2026. Consiga seu visto B1/B2 a tempo e viva a emoção de ver sua seleção na Copa do Mundo.',
-    'wc.loc.title': 'Califórnia, EUA',
-    'wc.loc.sub': 'Los Angeles e arredores',
+    'wc.title': '¡Te Levamos à <span class="wc-gold">Copa 2026</span><br/>para Torcer pelo Seu Time!',
+    'wc.sub': 'As melhores seleções da América jogarão nos <strong>Estados Unidos</strong> em 2026. Consiga seu visto B1/B2 a tempo e viva a emoção de torcer pelo seu time na Copa do Mundo.',
+    'wc.loc.title': 'EUA — 16 Cidades',
+    'wc.loc.sub': 'Nova York, Los Angeles, Miami e mais',
     'wc.date.title': 'Junho 2026',
-    'wc.date.sub': 'Fase de grupos da Copa',
+    'wc.date.sub': '48 seleções · 104 jogos',
     'wc.proc.title': 'Processamento Urgente',
     'wc.proc.sub': 'Agendamentos disponíveis agora',
     'wc.offer.badge': '⭐ OFERTA ESPECIAL COPA 2026',
-    'wc.offer.text': 'Visto B1/B2 com processamento prioritário para torcedores paraguaios. Inclui preparação de documentos, simulação de entrevista e acompanhamento personalizado até sua aprovação.',
+    'wc.offer.text': 'Visto B1/B2 com processamento prioritário para torcedores de toda a América. Inclui preparação de documentos, simulação de entrevista e acompanhamento personalizado até sua aprovação.',
     'wc.cta': 'Quero meu visto para a Copa →',
-    'wc.player.label': '🏆 Paraguai · Copa 2026',
-    'wc.ca.label': '☀️ Califórnia, Junho 2026',
-    'wc.fans.label': '🎉 Torcedores Albirroja',
+    'wc.teams.title': '🌎 Seleções das Américas · Copa 2026',
+    'wc.teams.sub': 'EUA · Canadá · México — Junho/Julho 2026',
+    'wc.fact1': 'Seleções', 'wc.fact2': 'Estádios', 'wc.fact3': 'Jogos', 'wc.fact4': 'Países Sede',
+    'wcfloat.title': 'Oferta Especial', 'wcfloat.sub': 'FIFA World Cup 2026™',
   },
 
   en: {
@@ -332,14 +336,12 @@ const translations = {
     'nav.contact': 'Contact',
     'nav.cta': 'Free Consultation',
 
-    'hero.badge': 'Visa USA Specialists · Paraguay &amp; Latin America',
+    'hero.badge': 'Specialists in <strong>American Visas</strong> · Latin America',
     'hero.title': 'Your Path to the<br/><span class="highlight">United States</span><br/>Starts Here',
     'hero.sub': 'We guide you through every visa process with professionalism, personalized attention, and real results. From tourist visa to permanent residency — we\'re with you every step.',
     'hero.cta1': 'Free Consultation',
     'hero.cta2': 'Our Services',
-    'hero.stat1': 'Successful Cases',
-    'hero.stat2': 'Approval Rate',
-    'hero.stat3': 'Years of Experience',
+    'hero.stat1': 'Years working at U.S. Immigration Law Firms',
     'hero.scroll': 'Scroll down',
 
     'countries.label': 'We serve clients from',
@@ -370,10 +372,10 @@ const translations = {
     'f1a.desc': 'Are you a student-athlete with a scholarship or sports program offer in the U.S.? We specialize in F1 visas for athletes, coordinating with your university and program requirements.',
     'f1a.list': '<li>Sports program documentation</li><li>Scholarship letter support</li><li>NCAA / NAIA guidance</li><li>Full interview preparation</li>',
 
-    'j1.tag': 'J1',
-    'j1.title': 'Exchange Visitor Visa (J1)',
-    'j1.desc': 'For interns, au pairs, researchers, and cultural exchange participants. We help you navigate the J1 visa process and connect you with your sponsor program requirements.',
-    'j1.list': '<li>Sponsor program coordination</li><li>DS-2019 form guidance</li><li>SEVIS fee assistance</li><li>Waiver eligibility review</li>',
+    'i130.tag': 'I-130',
+    'i130.title': 'I-130 Petition (Family)',
+    'i130.desc': 'Do you have a U.S. citizen or permanent resident family member who wants to sponsor you? We guide you through the entire I-130 petition process for family reunification.',
+    'i130.list': '<li>I-130 form preparation &amp; review</li><li>Family relationship documentation</li><li>USCIS case tracking</li><li>Consular process coordination</li>',
 
     'aos.tag': 'AOS',
     'aos.title': 'Adjustment of Status (Marriage)',
@@ -411,8 +413,10 @@ const translations = {
     'why.f3.desc': 'Reach us any time with questions — we\'re always a message away.',
     'why.f4.title': 'End-to-End Support',
     'why.f4.desc': 'From your first question to your visa in hand, we\'re with you.',
-    'why.stat1': 'Visas Approved',
-    'why.stat2': 'Approval Rate',
+    'why.cred.title': 'Paraguayans with U.S. Immigration Law Firm Experience',
+    'why.cred.desc': 'Our team is Paraguayan and worked directly inside U.S. immigration law firms. We know the system from the inside — and that makes all the difference for you.',
+    'why.stat1': 'Years at U.S. Immigration Law Firms',
+    'why.stat2': 'Paraguayan Team',
 
     'sec.test.badge': 'Real Stories',
     'sec.test.title': 'What Our Clients Say',
@@ -429,7 +433,7 @@ const translations = {
     'cont.wa.title': 'WhatsApp',
     'cont.wa.sub': 'Message us anytime',
     'cont.email.title': 'Email',
-    'cont.phone.title': 'Phone / Paraguay',
+    'cont.phone.title': 'Phone / USA',
 
     'form.name.label': 'Full Name',
     'form.email.label': 'Email',
@@ -439,17 +443,18 @@ const translations = {
     'form.msg.label': 'Tell us about your case',
     'form.btn': 'Send Message &rarr;',
     'form.disclaimer': 'Your information is 100% confidential and will never be shared with third parties.',
-    'form.success': '✓ Message sent!',
+    'form.success': 'Message sent! We\'ll be in touch soon.',
+    'form.error': 'Something went wrong. Message us directly on WhatsApp.',
     'form.name.ph': 'Your full name',
     'form.email.ph': 'your@email.com',
-    'form.phone.ph': '+595 972 224720',
+    'form.phone.ph': '+1 (303) 434-3224',
     'form.country.ph': 'Select your country',
     'form.visa.ph': 'Select a visa type',
     'form.msg.ph': 'Describe your situation briefly — we\'ll help you find the best path forward.',
     'form.visa.b1b2': 'B1/B2 – Tourist & Business',
     'form.visa.f1s': 'F1 – Student Visa',
     'form.visa.f1a': 'F1 – Student-Athlete Visa',
-    'form.visa.j1': 'J1 – Cultural Exchange',
+    'form.visa.i130': 'I-130 – Family Petition',
     'form.visa.aos': 'Adjustment of Status (Marriage)',
     'form.visa.n400': 'N-400 – Naturalization',
     'form.visa.other': 'Other / Not Sure',
@@ -471,20 +476,21 @@ const translations = {
     'sec.media.desc': 'Meet the real people who trusted Trust Visa USA to make their American dream come true.',
 
     'wc.badge': '⚽ Special Offer · FIFA World Cup 2026™',
-    'wc.title': 'Paraguay is going<br/>to the <span class="wc-gold">World Cup 2026!</span>',
-    'wc.sub': 'Paraguay will play in <strong>California</strong> in June 2026. Get your B1/B2 visa in time and live the experience of watching your national team at the World Cup.',
-    'wc.loc.title': 'California, U.S.A.',
-    'wc.loc.sub': 'Los Angeles &amp; surroundings',
+    'wc.title': 'We Get You to the <span class="wc-gold">World Cup 2026</span><br/>to Cheer Your Team!',
+    'wc.sub': 'The best teams from the Americas will play in the <strong>United States</strong> in 2026. Get your B1/B2 visa in time and experience cheering your team at the World Cup.',
+    'wc.loc.title': 'U.S.A. — 16 Cities',
+    'wc.loc.sub': 'New York, Los Angeles, Miami &amp; more',
     'wc.date.title': 'June 2026',
-    'wc.date.sub': 'World Cup group stage',
+    'wc.date.sub': '48 teams · 104 matches',
     'wc.proc.title': 'Urgent Processing',
     'wc.proc.sub': 'Appointments available now',
     'wc.offer.badge': '⭐ WORLD CUP 2026 SPECIAL OFFER',
-    'wc.offer.text': 'Priority B1/B2 visa processing for Paraguayan soccer fans. Includes document preparation, mock interview, and personalized follow-up until your approval.',
+    'wc.offer.text': 'Priority B1/B2 visa processing for soccer fans across the Americas. Includes document preparation, mock interview, and personalized follow-up until your approval.',
     'wc.cta': 'Get My World Cup Visa →',
-    'wc.player.label': '🏆 Paraguay · World Cup 2026',
-    'wc.ca.label': '☀️ California, June 2026',
-    'wc.fans.label': '🎉 Albirroja Fans',
+    'wc.teams.title': '🌎 Americas Teams · World Cup 2026',
+    'wc.teams.sub': 'U.S.A. · Canada · Mexico — June/July 2026',
+    'wc.fact1': 'Teams', 'wc.fact2': 'Stadiums', 'wc.fact3': 'Matches', 'wc.fact4': 'Host Nations',
+    'wcfloat.title': 'Special Offer', 'wcfloat.sub': 'FIFA World Cup 2026™',
   }
 };
 
@@ -539,22 +545,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ===== CONTACT FORM =====
+  // ===== CONTACT FORM — Web3Forms =====
   const form = document.getElementById('contactForm');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      const original = btn.innerHTML;
-      btn.innerHTML = translations[currentLang]['form.success'] || '✓ Enviado!';
-      btn.style.background = '#16A34A';
+      const btn  = document.getElementById('formSubmitBtn');
+      const ok   = document.getElementById('formSuccess');
+      const err  = document.getElementById('formError');
+      ok.style.display = 'none';
+      err.style.display = 'none';
       btn.disabled = true;
-      setTimeout(() => {
-        btn.innerHTML = original;
-        btn.style.background = '';
+      btn.innerHTML = '⏳ Enviando…';
+
+      try {
+        const res  = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: new FormData(form)
+        });
+        const data = await res.json();
+        if (data.success) {
+          ok.style.display = 'block';
+          form.reset();
+        } else {
+          err.style.display = 'block';
+        }
+      } catch (_) {
+        err.style.display = 'block';
+      } finally {
         btn.disabled = false;
-        form.reset();
-      }, 3500);
+        btn.innerHTML = translations[currentLang]['form.btn'] || 'Enviar Mensaje →';
+      }
     });
   }
 
