@@ -91,6 +91,15 @@ p { font-size: 1rem; }
   box-shadow: 0 2px 8px rgba(200,16,46,0.25);
 }
 .btn-nav:hover { background: var(--red-light); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(200,16,46,0.35); }
+.nav-links a.btn-nav-pay {
+  background: var(--green);
+  color: var(--white) !important;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.nav-links a.btn-nav-pay:hover { background: #15803D; }
 
 .btn-service,
 .btn-service-featured {
