@@ -96,19 +96,12 @@
     .pay-method-header h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: #1A2A6B; font-weight: 700; margin-bottom: 2px; }
     .pay-method-header p { font-size: 0.82rem; color: #94A3B8; margin: 0; }
 
-    /* Stripe button */
-    .btn-stripe {
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      background: #635BFF; color: white;
-      border: none; border-radius: 50px;
-      padding: 15px 28px; font-size: 1rem; font-weight: 600;
-      cursor: pointer; width: 100%; transition: 0.2s;
-      font-family: 'Jost', sans-serif; text-decoration: none;
-    }
-    .btn-stripe:hover { background: #4F46E5; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(99,91,255,0.35); }
-    .stripe-note { font-size: 0.75rem; color: #94A3B8; text-align: center; margin-top: 10px; }
+    /* Ueno brand color */
+    .ueno-accent { border-left: 4px solid #E63027; }
+    /* Pix brand color */
+    .pix-accent { border-left: 4px solid #32BCAD; }
 
-    /* Transfer info (Zelle / Venmo) */
+    /* Transfer info (Zelle / Venmo / Ueno / Pix) */
     .transfer-info { display: flex; flex-direction: column; gap: 10px; }
     .transfer-row {
       display: flex; align-items: center; justify-content: space-between;
@@ -221,21 +214,6 @@
     <p class="pay-section-label">Paso 2 — Elegí tu método de pago</p>
     <div class="pay-methods">
 
-      <!-- TARJETA DE CRÉDITO / DÉBITO -->
-      <div class="pay-method-card">
-        <div class="pay-method-header">
-          <span class="pay-method-icon">💳</span>
-          <div>
-            <h3>Tarjeta de Crédito / Débito</h3>
-            <p>Visa · Mastercard · American Express · Débito</p>
-          </div>
-        </div>
-        <a href="https://buy.stripe.com/REEMPLAZAR_CON_STRIPE_LINK" target="_blank" class="btn-stripe" id="stripeBtn">
-          💳 &nbsp;Pagar con Tarjeta
-        </a>
-        <p class="stripe-note">🔒 Procesado por Stripe · Encriptación SSL · No guardamos datos de tarjeta</p>
-      </div>
-
       <!-- ZELLE -->
       <div class="pay-method-card zelle-accent">
         <div class="pay-method-header">
@@ -298,6 +276,73 @@
         </div>
       </div>
 
+      <!-- UENO BANK -->
+      <div class="pay-method-card ueno-accent">
+        <div class="pay-method-header">
+          <span class="pay-method-icon">🇵🇾</span>
+          <div>
+            <h3>Ueno Bank</h3>
+            <p>Transferencia desde Paraguay · Solo clientes Ueno</p>
+          </div>
+        </div>
+        <div class="transfer-info">
+          <div class="transfer-row">
+            <div>
+              <div class="transfer-label">Número de cuenta</div>
+              <div class="transfer-value" id="uenoCuenta">Consultar por WhatsApp</div>
+            </div>
+          </div>
+          <div class="transfer-row">
+            <div>
+              <div class="transfer-label">Titular</div>
+              <div class="transfer-value">Trust Visa USA</div>
+            </div>
+          </div>
+        </div>
+        <div class="transfer-steps">
+          <p>
+            <strong>① </strong>Abrí Ueno Bank → Transferir<br/>
+            <strong>② </strong>Ingresá el monto acordado en guaraníes o USD<br/>
+            <strong>③ </strong>En el concepto escribí: tu nombre + servicio elegido<br/>
+            <strong>④ </strong>Envianos el comprobante por <a href="https://wa.me/13034343224?text=Hola%2C+quiero+pagar+con+Ueno+Bank." target="_blank" style="color:#1A2A6B;font-weight:700;">WhatsApp</a> para recibir los datos
+          </p>
+        </div>
+      </div>
+
+      <!-- PIX BRAZIL -->
+      <div class="pay-method-card pix-accent">
+        <div class="pay-method-header">
+          <span class="pay-method-icon">🇧🇷</span>
+          <div>
+            <h3>Pix</h3>
+            <p>Transferência instantânea · Apenas clientes do Brasil</p>
+          </div>
+        </div>
+        <div class="transfer-info">
+          <div class="transfer-row">
+            <div>
+              <div class="transfer-label">Chave Pix (Email)</div>
+              <div class="transfer-value">info@trustvisausa.com</div>
+            </div>
+            <button class="copy-btn" onclick="copyText('info@trustvisausa.com', this)">📋 Copiar</button>
+          </div>
+          <div class="transfer-row">
+            <div>
+              <div class="transfer-label">Nome do destinatário</div>
+              <div class="transfer-value">Trust Visa USA</div>
+            </div>
+          </div>
+        </div>
+        <div class="transfer-steps">
+          <p>
+            <strong>① </strong>Abra seu banco → Pix → Transferir<br/>
+            <strong>② </strong>Use a chave: <strong>info@trustvisausa.com</strong><br/>
+            <strong>③ </strong>No campo descrição: seu nome + serviço escolhido<br/>
+            <strong>④ </strong>Envie o comprovante pelo <a href="https://wa.me/13034343224?text=Ol%C3%A1%2C+quero+pagar+via+Pix." target="_blank" style="color:#1A2A6B;font-weight:700;">WhatsApp</a>
+          </p>
+        </div>
+      </div>
+
     </div>
 
     <!-- POST-PAYMENT NOTE -->
@@ -315,15 +360,9 @@
   </main>
 
   <script>
-    let selectedService = '';
-
     function selectService(el, name) {
       document.querySelectorAll('.service-opt').forEach(o => o.classList.remove('selected'));
       el.classList.add('selected');
-      selectedService = name;
-      // Update Stripe button with service in URL note (optional)
-      const stripeBtn = document.getElementById('stripeBtn');
-      stripeBtn.title = 'Pagar por: ' + name;
     }
 
     function copyText(text, btn) {

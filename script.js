@@ -9,7 +9,7 @@ const translations = {
 
     'hero.badge': 'Especialistas en <strong>Visas Americanas</strong> · Latinoamérica',
     'hero.title': 'Tu Camino a los<br/><span class="highlight">Estados Unidos</span><br/>Empieza Aquí',
-    'hero.sub': 'Te acompañamos en cada paso del proceso de visa con profesionalismo, atención personalizada y resultados reales. Desde visa de turista hasta residencia permanente — estamos contigo.',
+    'hero.sub': 'Te acompañamos en cada paso del proceso de visa con profesionalismo, atención personalizada y resultados reales. Desde visa de turista hasta ciudadanía americana — estamos contigo.',
     'hero.cta1': 'Consulta Gratuita',
     'hero.cta2': 'Ver Servicios',
     'hero.stat1': 'Años trabajando en Estudios Jurídicos de Inmigración en EE.UU.',
@@ -173,7 +173,7 @@ const translations = {
 
     'hero.badge': 'Especialistas em <strong>Vistos Americanos</strong> · América Latina',
     'hero.title': 'Seu Caminho para os<br/><span class="highlight">Estados Unidos</span><br/>Começa Aqui',
-    'hero.sub': 'Acompanhamos você em cada etapa do processo de visto com profissionalismo, atendimento personalizado e resultados reais. Do visto de turista à residência permanente — estamos com você.',
+    'hero.sub': 'Acompanhamos você em cada etapa do processo de visto com profissionalismo, atendimento personalizado e resultados reais. Do visto de turista à cidadania americana — estamos com você.',
     'hero.cta1': 'Consultoria Gratuita',
     'hero.cta2': 'Ver Serviços',
     'hero.stat1': 'Anos trabalhando em Escritórios Jurídicos de Imigração nos EUA',
@@ -338,7 +338,7 @@ const translations = {
 
     'hero.badge': 'Specialists in <strong>American Visas</strong> · Latin America',
     'hero.title': 'Your Path to the<br/><span class="highlight">United States</span><br/>Starts Here',
-    'hero.sub': 'We guide you through every visa process with professionalism, personalized attention, and real results. From tourist visa to permanent residency — we\'re with you every step.',
+    'hero.sub': 'We guide you through every visa process with professionalism, personalized attention, and real results. From tourist visa to U.S. citizenship — we\'re with you every step.',
     'hero.cta1': 'Free Consultation',
     'hero.cta2': 'Our Services',
     'hero.stat1': 'Years working at U.S. Immigration Law Firms',
