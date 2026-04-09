@@ -804,17 +804,29 @@ p { font-size: 1rem; }
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
-  .wc-hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .wc-trophy-side { display: none; }
+  .wc-hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .wc-trophy-side { display: flex; flex-direction: column; gap: 24px; }
   .wc-teams-grid { grid-template-columns: repeat(6, 1fr); }
+  .wc-trophy-wrap { max-width: 100%; }
+  .wc-trophy-photo { border-radius: 16px; }
 }
 @media (max-width: 768px) {
+  .wc-hero-grid { padding: 0 0 40px; }
   .wc-teams-grid { grid-template-columns: repeat(4, 1fr); }
-  .wc-draw-overlay-side { padding: 24px 28px; }
-  .wc-draw-photo--wide { max-height: 280px; }
-  .wc-flag-stripe { margin-bottom: 36px; }
-  .wc-qualified-grid { grid-template-columns: 1fr; gap: 32px; }
-  .wc-draw-text { font-size: 1.2rem; }
+  .wc-draw-overlay-side { padding: 20px 22px; gap: 12px; }
+  .wc-draw-photo--wide { max-height: 240px; }
+  .wc-draw-text { font-size: 1.1rem; }
+  .wc-flag-stripe { margin-bottom: 32px; }
+  .wc-promo-box { padding: 18px 18px; }
+  .wc-promo-price { font-size: 1.3rem; }
+  .wc-promo-label { font-size: 0.85rem; }
+  .wc-promo-desc { font-size: 0.7rem; }
+  .wc-facts-strip { padding: 14px 16px; gap: 4px; }
+  .wc-fact strong { font-size: 1.1rem; }
+  .wc-fact span { font-size: 0.62rem; }
+  .wc-fact-sep { height: 28px; }
+  .wc-trophy-badge { font-size: 0.72rem; padding: 8px 16px; bottom: -14px; }
+  .wc-bottom { padding: 0 0 8px; }
 }
 
 /* ===== COUNTRIES BAR ===== */
