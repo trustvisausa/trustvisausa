@@ -12,7 +12,7 @@ const translations = {
     'hero.sub': 'Te acompañamos en cada paso del proceso de visa con profesionalismo, atención personalizada y resultados reales. Desde visa de turista hasta ciudadanía americana — estamos contigo.',
     'hero.cta1': 'Consulta Gratuita',
     'hero.cta2': 'Ver Servicios',
-    'hero.stat1': 'Años trabajando en Estudios Jurídicos de Inmigración en EE.UU.',
+    'hero.stat1': 'Trabajos Concluidos',
     'hero.scroll': 'Ver más',
 
     'countries.label': 'Atendemos clientes desde',
@@ -180,7 +180,7 @@ const translations = {
     'hero.sub': 'Acompanhamos você em cada etapa do processo de visto com profissionalismo, atendimento personalizado e resultados reais. Do visto de turista à cidadania americana — estamos com você.',
     'hero.cta1': 'Consultoria Gratuita',
     'hero.cta2': 'Ver Serviços',
-    'hero.stat1': 'Anos trabalhando em Escritórios Jurídicos de Imigração nos EUA',
+    'hero.stat1': 'Trabalhos Concluídos',
     'hero.scroll': 'Ver mais',
 
     'countries.label': 'Atendemos clientes de',
@@ -349,7 +349,7 @@ const translations = {
     'hero.sub': 'We guide you through every visa process with professionalism, personalized attention, and real results. From tourist visa to U.S. citizenship — we\'re with you every step.',
     'hero.cta1': 'Free Consultation',
     'hero.cta2': 'Our Services',
-    'hero.stat1': 'Years working at U.S. Immigration Law Firms',
+    'hero.stat1': 'Completed Cases',
     'hero.scroll': 'Scroll down',
 
     'countries.label': 'We serve clients from',
