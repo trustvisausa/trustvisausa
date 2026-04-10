@@ -217,12 +217,48 @@
       color: #9F1239; font-size: 0.88rem; margin-top: 12px;
     }
 
+    /* ALT METHODS COMPACT */
+    .alt-methods-card {
+      background: white;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 26px 28px;
+      margin-bottom: 32px;
+    }
+    .alt-title {
+      font-size: 0.88rem; font-weight: 700; color: #475569;
+      margin-bottom: 4px;
+    }
+    .alt-sub {
+      font-size: 0.8rem; color: #94A3B8; margin-bottom: 18px;
+    }
+    .alt-badges {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;
+    }
+    .alt-badge {
+      display: flex; align-items: center; gap: 9px;
+      border: 1.5px solid var(--bc); border-radius: 50px;
+      padding: 8px 16px; background: white;
+      font-size: 0.85rem; font-weight: 700; color: var(--bc);
+    }
+    .alt-badge svg { flex-shrink: 0; }
+    .alt-wa-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #25D366; color: white;
+      border-radius: 50px; padding: 10px 20px;
+      font-size: 0.85rem; font-weight: 700;
+      transition: opacity 0.2s;
+    }
+    .alt-wa-cta:hover { opacity: 0.88; }
+
     /* RESPONSIVE */
     @media (max-width: 640px) {
       .pay-header { padding: 12px 16px; }
       .pay-logo img { height: 46px; }
       .pay-method-card { padding: 22px 18px; }
       .service-select { grid-template-columns: 1fr 1fr; }
+      .alt-badges { gap: 8px; }
+      .alt-badge { font-size: 0.8rem; padding: 7px 13px; }
     }
   </style>
 </head>
@@ -310,173 +346,55 @@
       </div>
     </div>
 
-    <!-- STEP 3: OTHER PAYMENT METHODS -->
-    <p class="pay-section-label">Paso 3 — Otros métodos de pago</p>
-    <div class="pay-methods">
+    <!-- ALT METHODS: compact -->
+    <div class="alt-methods-card">
+      <p class="alt-title">¿No podés realizar el pago con PayPal?</p>
+      <p class="alt-sub">También aceptamos transferencias por:</p>
+      <div class="alt-badges">
 
-      <!-- ZELLE -->
-      <div class="pay-method-card zelle-accent">
-        <div class="pay-method-header">
-          <span class="pay-method-icon">💜</span>
-          <div>
-            <h3>Zelle</h3>
-            <p>Transferencia instantánea · Solo desde bancos de EE.UU.</p>
-          </div>
+        <!-- Venmo -->
+        <div class="alt-badge" style="--bc:#008CFF;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="5" fill="#008CFF"/>
+            <path d="M17.5 5c.4 1 .5 2 .5 3.2 0 3.3-2.8 7.6-5.1 10.8H8.6L6 6.3l4.3-.4 1.3 9.8c1.2-2 2.7-5.2 2.7-7.4 0-1.2-.2-2-.6-2.7L17.5 5z" fill="white"/>
+          </svg>
+          Venmo
         </div>
-        <div class="transfer-info">
-          <div class="transfer-row">
-            <div>
-              <div class="transfer-label">Enviar a este email</div>
-              <div class="transfer-value">info@trustvisausa.com</div>
-            </div>
-            <button class="copy-btn" onclick="copyText('info@trustvisausa.com', this)">📋 Copiar</button>
-          </div>
-          <div class="transfer-row">
-            <div>
-              <div class="transfer-label">Nombre del destinatario</div>
-              <div class="transfer-value">Trust Visa USA</div>
-            </div>
-          </div>
+
+        <!-- Zelle -->
+        <div class="alt-badge" style="--bc:#6B1FA2;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="5" fill="#6B1FA2"/>
+            <path d="M6 7h8.5l-7 5.5H16M6 11.5l7-5.5H6" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.5 12.5h8.5l-7 4.5H17" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Zelle
         </div>
-        <div class="transfer-steps">
-          <p>
-            <strong>① </strong>Abrí tu app bancaria → Zelle<br/>
-            <strong>② </strong>Enviá al email <strong>info@trustvisausa.com</strong><br/>
-            <strong>③ </strong>En el memo escribí: tu nombre completo + servicio elegido<br/>
-            <strong>④ </strong>Envianos el comprobante por <a href="https://wa.me/13034343224" target="_blank" style="color:#1A2A6B;font-weight:700;">WhatsApp</a>
-          </p>
+
+        <!-- Pix -->
+        <div class="alt-badge" style="--bc:#32BCAD;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="5" fill="#32BCAD"/>
+            <path d="M9.5 9.5L12 7l2.5 2.5-2.5 2.5L9.5 9.5zM9.5 14.5L12 17l2.5-2.5L12 12l-2.5 2.5z" fill="white"/>
+            <path d="M7 12l2.5-2.5M14.5 9.5L17 12M14.5 14.5L17 12M7 12l2.5 2.5" stroke="white" stroke-width="1.2"/>
+          </svg>
+          Pix
         </div>
+
+        <!-- Ueno Bank -->
+        <div class="alt-badge" style="--bc:#E63027;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="5" fill="#E63027"/>
+            <text x="12" y="16.5" text-anchor="middle" font-size="11" font-weight="800" font-family="Arial,sans-serif" fill="white">U</text>
+          </svg>
+          Ueno Bank 🇵🇾
+        </div>
+
       </div>
-
-      <!-- VENMO -->
-      <div class="pay-method-card venmo-accent">
-        <div class="pay-method-header">
-          <span class="pay-method-icon">💙</span>
-          <div>
-            <h3>Venmo</h3>
-            <p>Rápido y fácil desde tu teléfono</p>
-          </div>
-        </div>
-        <div class="transfer-info">
-          <div class="transfer-row">
-            <div>
-              <div class="transfer-label">Usuario Venmo</div>
-              <div class="transfer-value">@TrustVisaUSA</div>
-            </div>
-            <button class="copy-btn" onclick="copyText('@TrustVisaUSA', this)">📋 Copiar</button>
-          </div>
-        </div>
-        <div class="transfer-steps">
-          <p>
-            <strong>① </strong>Abrí Venmo → Buscar → <strong>@TrustVisaUSA</strong><br/>
-            <strong>② </strong>Ingresá el monto acordado con nuestro equipo<br/>
-            <strong>③ </strong>En el mensaje escribí: tu nombre + servicio elegido<br/>
-            <strong>④ </strong>Envianos el comprobante por <a href="https://wa.me/13034343224" target="_blank" style="color:#1A2A6B;font-weight:700;">WhatsApp</a>
-          </p>
-        </div>
-      </div>
-
-      <!-- UENO BANK -->
-      <div class="pay-method-card ueno-accent">
-        <div class="pay-method-header">
-          <span class="pay-method-icon">🇵🇾</span>
-          <div>
-            <h3>Ueno Bank</h3>
-            <p>Transferencia desde Paraguay · Solo clientes Ueno</p>
-          </div>
-        </div>
-        <div class="transfer-info">
-          <div class="transfer-row">
-            <div>
-              <div class="transfer-label">Número de cuenta</div>
-              <div class="transfer-value" id="uenoCuenta">Consultar por WhatsApp</div>
-            </div>
-          </div>
-          <div class="transfer-row">
-            <div>
-              <div class="transfer-label">Titular</div>
-              <div class="transfer-value">Trust Visa USA</div>
-            </div>
-          </div>
-        </div>
-        <div class="transfer-steps">
-          <p>
-            <strong>① </strong>Abrí Ueno Bank → Transferir<br/>
-            <strong>② </strong>Ingresá el monto acordado en guaraníes o USD<br/>
-            <strong>③ </strong>En el concepto escribí: tu nombre + servicio elegido<br/>
-            <strong>④ </strong>Envianos el comprobante por <a href="https://wa.me/13034343224?text=Hola%2C+quiero+pagar+con+Ueno+Bank." target="_blank" style="color:#1A2A6B;font-weight:700;">WhatsApp</a> para recibir los datos
-          </p>
-        </div>
-      </div>
-
-      <!-- PAYONEER -->
-      <div class="pay-method-card payoneer-accent">
-        <div class="pay-method-header">
-          <span class="pay-method-icon">🌐</span>
-          <div>
-            <h3>Payoneer</h3>
-            <p>Pago internacional · Disponible en todo el mundo</p>
-          </div>
-        </div>
-        <div class="transfer-info">
-          <div class="transfer-row">
-            <div>
-              <div class="transfer-label">Email de Payoneer</div>
-              <div class="transfer-value">info@trustvisausa.com</div>
-            </div>
-            <button class="copy-btn" onclick="copyText('info@trustvisausa.com', this)">📋 Copiar</button>
-          </div>
-          <div class="transfer-row">
-            <div>
-              <div class="transfer-label">Titular</div>
-              <div class="transfer-value">Trust Visa USA</div>
-            </div>
-          </div>
-        </div>
-        <div class="transfer-steps">
-          <p>
-            <strong>① </strong>Iniciá sesión en tu cuenta Payoneer<br/>
-            <strong>② </strong>Hacé clic en <strong>Enviar dinero</strong> → A un email de Payoneer<br/>
-            <strong>③ </strong>Ingresá <strong>info@trustvisausa.com</strong> y el monto acordado<br/>
-            <strong>④ </strong>Envianos el comprobante por <a href="https://wa.me/13034343224?text=Hola%2C+quiero+pagar+con+Payoneer." target="_blank" style="color:#1A2A6B;font-weight:700;">WhatsApp</a>
-          </p>
-        </div>
-      </div>
-
-      <!-- PIX BRAZIL -->
-      <div class="pay-method-card pix-accent">
-        <div class="pay-method-header">
-          <span class="pay-method-icon">🇧🇷</span>
-          <div>
-            <h3>Pix</h3>
-            <p>Transferência instantânea · Apenas clientes do Brasil</p>
-          </div>
-        </div>
-        <div class="transfer-info">
-          <div class="transfer-row">
-            <div>
-              <div class="transfer-label">Chave Pix (Email)</div>
-              <div class="transfer-value">info@trustvisausa.com</div>
-            </div>
-            <button class="copy-btn" onclick="copyText('info@trustvisausa.com', this)">📋 Copiar</button>
-          </div>
-          <div class="transfer-row">
-            <div>
-              <div class="transfer-label">Nome do destinatário</div>
-              <div class="transfer-value">Trust Visa USA</div>
-            </div>
-          </div>
-        </div>
-        <div class="transfer-steps">
-          <p>
-            <strong>① </strong>Abra seu banco → Pix → Transferir<br/>
-            <strong>② </strong>Use a chave: <strong>info@trustvisausa.com</strong><br/>
-            <strong>③ </strong>No campo descrição: seu nome + serviço escolhido<br/>
-            <strong>④ </strong>Envie o comprovante pelo <a href="https://wa.me/13034343224?text=Ol%C3%A1%2C+quero+pagar+via+Pix." target="_blank" style="color:#1A2A6B;font-weight:700;">WhatsApp</a>
-          </p>
-        </div>
-      </div>
-
+      <a href="https://wa.me/13034343224?text=Hola%2C+quiero+consultar+un+m%C3%A9todo+de+pago+alternativo." target="_blank" class="alt-wa-cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Escribinos al WhatsApp
+      </a>
     </div>
 
     <!-- POST-PAYMENT NOTE -->
