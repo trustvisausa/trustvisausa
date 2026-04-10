@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <script src="https://www.paypal.com/sdk/js?client-id=AXRyAtKv2MksApGgzrwwAXWc_fa0eoLrJwMh1j0_QWXcwhwDIawwgAqF7DVeGMs807Q4MK3IZf1NoWti&currency=USD&intent=capture" defer></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Jost', sans-serif; font-size: 17px; background: #F8FAFC; color: #1E293B; -webkit-font-smoothing: antialiased; }
@@ -149,6 +150,73 @@
     /* FOOTER */
     .pay-footer { text-align: center; font-size: 0.78rem; color: #94A3B8; margin-top: 52px; padding-top: 24px; border-top: 1px solid #E2E8F0; line-height: 2; }
 
+    /* PAYPAL QUICK PAY */
+    .paypal-section { margin-bottom: 44px; }
+    .paypal-card {
+      background: white;
+      border: 2px solid #003087;
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 4px 32px rgba(0,48,135,0.10);
+    }
+    .paypal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 20px; padding-bottom: 18px;
+      border-bottom: 1.5px solid #EEF1FB;
+    }
+    .paypal-logo-wrap { display: flex; align-items: center; gap: 14px; }
+    .paypal-logo-text { font-size: 1.5rem; font-weight: 800; font-family: 'Jost', sans-serif; color: #003087; }
+    .paypal-logo-text span { color: #009cde; }
+    .paypal-badge {
+      background: #EEF1FB; color: #1A2A6B;
+      font-size: 0.76rem; font-weight: 600;
+      border-radius: 50px; padding: 5px 13px;
+    }
+    .paypal-service-row {
+      background: #F8FAFC; border: 1.5px solid #E2E8F0;
+      border-radius: 10px; padding: 12px 18px;
+      font-size: 0.9rem; color: #475569; margin-bottom: 20px;
+    }
+    .paypal-service-row strong { color: #1A2A6B; }
+    .paypal-amount-label {
+      display: block; font-size: 0.72rem; font-weight: 700;
+      color: #94A3B8; text-transform: uppercase; letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .paypal-amount-input {
+      display: flex; align-items: center;
+      border: 2px solid #E2E8F0; border-radius: 12px;
+      overflow: hidden; margin-bottom: 22px; transition: border-color 0.2s;
+    }
+    .paypal-amount-input:focus-within { border-color: #003087; }
+    .paypal-currency {
+      background: #F8FAFC; padding: 14px 18px;
+      font-weight: 700; color: #1A2A6B; font-size: 1.15rem;
+      border-right: 1.5px solid #E2E8F0; flex-shrink: 0;
+    }
+    .paypal-amount-input input {
+      border: none; outline: none; width: 100%;
+      padding: 14px 16px; font-size: 1.3rem;
+      font-weight: 700; color: #1A2A6B;
+      font-family: 'Jost', sans-serif; background: white;
+    }
+    .paypal-hint {
+      font-size: 0.78rem; color: #94A3B8; margin-top: -14px;
+      margin-bottom: 20px;
+    }
+    .paypal-success {
+      background: #ECFDF5; border: 1.5px solid #BBF7D0;
+      border-radius: 12px; padding: 22px 26px;
+      color: #166534; font-size: 0.95rem; line-height: 1.75;
+      text-align: center;
+    }
+    .paypal-success strong { display: block; font-size: 1.1rem; margin-bottom: 6px; }
+    .paypal-error {
+      background: #FFF1F2; border: 1.5px solid #FECDD3;
+      border-radius: 12px; padding: 16px 20px;
+      color: #9F1239; font-size: 0.88rem; margin-top: 12px;
+    }
+
     /* RESPONSIVE */
     @media (max-width: 640px) {
       .pay-header { padding: 12px 16px; }
@@ -212,8 +280,38 @@
       </div>
     </div>
 
-    <!-- STEP 2: PAYMENT METHOD -->
-    <p class="pay-section-label">Paso 2 — Elegí tu método de pago</p>
+    <!-- PAYPAL QUICK PAY (aparece al seleccionar servicio) -->
+    <div id="paypal-section" class="paypal-section" style="display:none;">
+      <p class="pay-section-label">Paso 2 — Pagar con tarjeta o PayPal</p>
+      <div class="paypal-card">
+        <div class="paypal-header">
+          <div class="paypal-logo-wrap">
+            <span class="paypal-logo-text">Pay<span>Pal</span></span>
+            <span class="paypal-badge">🔒 Seguro · Visa · Mastercard · Amex</span>
+          </div>
+        </div>
+        <div class="paypal-service-row">
+          Servicio seleccionado: <strong id="pp-service-name">—</strong>
+        </div>
+        <label class="paypal-amount-label">Monto acordado con nuestro equipo (USD)</label>
+        <div class="paypal-amount-input">
+          <span class="paypal-currency">$</span>
+          <input type="number" id="pp-amount" placeholder="0.00" min="1" step="0.01" />
+        </div>
+        <p class="paypal-hint">Ingresá el monto exacto que acordaste con Trust Visa USA antes de proceder.</p>
+        <div id="pp-btn-container"></div>
+        <div id="pp-success" class="paypal-success" style="display:none;">
+          <strong>✅ ¡Pago recibido con éxito!</strong>
+          Te contactamos en las próximas 24 horas hábiles para comenzar tu proceso de documentación.
+        </div>
+        <div id="pp-error" class="paypal-error" style="display:none;">
+          ⚠️ Hubo un error con el pago. Intentá de nuevo o <a href="https://wa.me/13034343224" target="_blank" style="color:#9F1239;font-weight:700;">contactanos por WhatsApp</a>.
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3: OTHER PAYMENT METHODS -->
+    <p class="pay-section-label">Paso 3 — Otros métodos de pago</p>
     <div class="pay-methods">
 
       <!-- ZELLE -->
@@ -396,9 +494,47 @@
   </main>
 
   <script>
+    let ppRendered = false;
+
     function selectService(el, name) {
       document.querySelectorAll('.service-opt').forEach(o => o.classList.remove('selected'));
       el.classList.add('selected');
+
+      document.getElementById('pp-service-name').textContent = name;
+      const section = document.getElementById('paypal-section');
+      section.style.display = 'block';
+      setTimeout(() => section.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+
+      if (!ppRendered) {
+        ppRendered = true;
+        paypal.Buttons({
+          style: { layout: 'vertical', color: 'blue', shape: 'rect', label: 'pay', height: 50 },
+          createOrder: function(data, actions) {
+            const amt = parseFloat(document.getElementById('pp-amount').value);
+            if (!amt || amt <= 0) {
+              alert('Por favor ingresá el monto acordado antes de continuar.');
+              return Promise.reject(new Error('Monto requerido'));
+            }
+            return actions.order.create({
+              purchase_units: [{
+                amount: { value: amt.toFixed(2), currency_code: 'USD' },
+                description: document.getElementById('pp-service-name').textContent
+              }]
+            });
+          },
+          onApprove: function(data, actions) {
+            return actions.order.capture().then(function() {
+              document.getElementById('pp-btn-container').style.display = 'none';
+              document.getElementById('pp-success').style.display = 'block';
+              document.getElementById('pp-error').style.display = 'none';
+            });
+          },
+          onError: function(err) {
+            document.getElementById('pp-error').style.display = 'block';
+            console.error(err);
+          }
+        }).render('#pp-btn-container');
+      }
     }
 
     function copyText(text, btn) {
