@@ -280,80 +280,80 @@
   <!-- MAIN CONTENT -->
   <main class="pay-main">
 
-    <div class="pay-secure">🔒 Pago 100% seguro y confidencial</div>
+    <div class="pay-secure" data-i18n="pago.secure">🔒 Pago 100% seguro y confidencial</div>
 
-    <h1 class="pay-title">Iniciar Proceso de<br/>Documentación</h1>
-    <p class="pay-subtitle">Seleccioná tu servicio y el método de pago de tu preferencia. Después del pago nos contactamos en menos de 24 horas para comenzar.</p>
+    <h1 class="pay-title" data-i18n="pago.title">Iniciar Proceso de<br/>Documentación</h1>
+    <p class="pay-subtitle" data-i18n="pago.sub">Seleccioná tu servicio y el método de pago de tu preferencia. Después del pago nos contactamos en menos de 24 horas para comenzar.</p>
 
     <!-- STEP 1: SERVICE SELECTION -->
-    <p class="pay-section-label">Paso 1 — Seleccioná tu servicio</p>
+    <p class="pay-section-label" data-i18n="pago.step1">Paso 1 — Seleccioná tu servicio</p>
     <div class="service-select" id="serviceSelect">
-      <div class="service-opt" onclick="selectService(this, 'B1/B2 – Turista y Negocios')">
+      <div class="service-opt" onclick="selectService(this)">
         <strong>B1 / B2</strong>
-        <span>Turista y Negocios</span>
-        <span class="svc-check">✓ Seleccionado</span>
+        <span data-i18n="pago.svc.b1b2">Turista y Negocios</span>
+        <span class="svc-check" data-i18n="pago.selected">✓ Seleccionado</span>
       </div>
-      <div class="service-opt" onclick="selectService(this, 'F1 – Visa de Estudiante')">
+      <div class="service-opt" onclick="selectService(this)">
         <strong>F1 Estudiante</strong>
-        <span>Visa de Estudiante</span>
-        <span class="svc-check">✓ Seleccionado</span>
+        <span data-i18n="pago.svc.f1">Visa de Estudiante</span>
+        <span class="svc-check" data-i18n="pago.selected">✓ Seleccionado</span>
       </div>
-      <div class="service-opt" onclick="selectService(this, 'F1 – Visa Estudiante-Atleta')">
+      <div class="service-opt" onclick="selectService(this)">
         <strong>F1 Atleta</strong>
-        <span>Estudiante-Deportista</span>
-        <span class="svc-check">✓ Seleccionado</span>
+        <span data-i18n="pago.svc.f1a">Estudiante-Deportista</span>
+        <span class="svc-check" data-i18n="pago.selected">✓ Seleccionado</span>
       </div>
-      <div class="service-opt" onclick="selectService(this, 'I-130 – Petición Familiar')">
+      <div class="service-opt" onclick="selectService(this)">
         <strong>I-130</strong>
-        <span>Petición Familiar</span>
-        <span class="svc-check">✓ Seleccionado</span>
+        <span data-i18n="pago.svc.i130">Petición Familiar</span>
+        <span class="svc-check" data-i18n="pago.selected">✓ Seleccionado</span>
       </div>
-      <div class="service-opt" onclick="selectService(this, 'AOS – Ajuste de Estatus')">
+      <div class="service-opt" onclick="selectService(this)">
         <strong>AOS</strong>
-        <span>Ajuste de Estatus</span>
-        <span class="svc-check">✓ Seleccionado</span>
+        <span data-i18n="pago.svc.aos">Ajuste de Estatus</span>
+        <span class="svc-check" data-i18n="pago.selected">✓ Seleccionado</span>
       </div>
-      <div class="service-opt" onclick="selectService(this, 'N-400 – Naturalización / Ciudadanía')">
+      <div class="service-opt" onclick="selectService(this)">
         <strong>N-400</strong>
-        <span>Naturalización / Ciudadanía</span>
-        <span class="svc-check">✓ Seleccionado</span>
+        <span data-i18n="pago.svc.n400">Naturalización / Ciudadanía</span>
+        <span class="svc-check" data-i18n="pago.selected">✓ Seleccionado</span>
       </div>
     </div>
 
     <!-- PAYPAL QUICK PAY (aparece al seleccionar servicio) -->
     <div id="paypal-section" class="paypal-section" style="display:none;">
-      <p class="pay-section-label">Paso 2 — Pagar con tarjeta o PayPal</p>
+      <p class="pay-section-label" data-i18n="pago.step2">Paso 2 — Pagar con tarjeta o PayPal</p>
       <div class="paypal-card">
         <div class="paypal-header">
           <div class="paypal-logo-wrap">
             <span class="paypal-logo-text">Pay<span>Pal</span></span>
-            <span class="paypal-badge">🔒 Seguro · Visa · Mastercard · Amex</span>
+            <span class="paypal-badge" data-i18n="pago.pp.badge">🔒 Seguro · Visa · Mastercard · Amex</span>
           </div>
         </div>
         <div class="paypal-service-row">
-          Servicio seleccionado: <strong id="pp-service-name">—</strong>
+          <span data-i18n="pago.pp.service">Servicio seleccionado:</span> <strong id="pp-service-name">—</strong>
         </div>
-        <label class="paypal-amount-label">Monto acordado con nuestro equipo (USD)</label>
+        <label class="paypal-amount-label" data-i18n="pago.pp.amount">Monto acordado con nuestro equipo (USD)</label>
         <div class="paypal-amount-input">
           <span class="paypal-currency">$</span>
-          <input type="number" id="pp-amount" placeholder="0.00" min="1" step="0.01" />
+          <input type="number" id="pp-amount" data-i18n-ph="pago.pp.amountph" placeholder="0.00" min="1" step="0.01" />
         </div>
-        <p class="paypal-hint">Ingresá el monto exacto que acordaste con Trust Visa USA antes de proceder.</p>
+        <p class="paypal-hint" data-i18n="pago.pp.hint">Ingresá el monto exacto que acordaste con Trust Visa USA antes de proceder.</p>
         <div id="pp-btn-container"></div>
         <div id="pp-success" class="paypal-success" style="display:none;">
-          <strong>✅ ¡Pago recibido con éxito!</strong>
-          Te contactamos en las próximas 24 horas hábiles para comenzar tu proceso de documentación.
+          <strong data-i18n="pago.pp.ok.title">✅ ¡Pago recibido con éxito!</strong>
+          <span data-i18n="pago.pp.ok.text">Te contactamos en las próximas 24 horas hábiles para comenzar tu proceso de documentación.</span>
         </div>
         <div id="pp-error" class="paypal-error" style="display:none;">
-          ⚠️ Hubo un error con el pago. Intentá de nuevo o <a href="https://wa.me/13034343224" target="_blank" style="color:#9F1239;font-weight:700;">contactanos por WhatsApp</a>.
+          <span data-i18n="pago.pp.err">⚠️ Hubo un error con el pago. Intentá de nuevo o</span> <a href="https://wa.me/13034343224" target="_blank" style="color:#9F1239;font-weight:700;" data-i18n="pago.pp.err.wa">contactanos por WhatsApp</a>.
         </div>
       </div>
     </div>
 
     <!-- ALT METHODS: compact -->
     <div class="alt-methods-card">
-      <p class="alt-title">¿No podés realizar el pago con PayPal?</p>
-      <p class="alt-sub">También aceptamos transferencias por:</p>
+      <p class="alt-title" data-i18n="pago.alt.title">¿No podés realizar el pago con PayPal?</p>
+      <p class="alt-sub" data-i18n="pago.alt.sub">También aceptamos transferencias por:</p>
       <div class="alt-badges">
 
         <!-- Venmo -->
@@ -379,20 +379,19 @@
       </div>
       <a href="https://wa.me/13034343224?text=Hola%2C+quiero+consultar+un+m%C3%A9todo+de+pago+alternativo." target="_blank" class="alt-wa-cta">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Escribinos al WhatsApp
+        <span data-i18n="pago.alt.wa">Escribinos al WhatsApp</span>
       </a>
     </div>
 
     <!-- POST-PAYMENT NOTE -->
     <div class="pay-confirm-note">
-      <strong>📩 ¿Qué pasa después del pago?</strong>
-      Una vez confirmado el pago te contactamos dentro de las siguientes <strong>24 horas hábiles</strong> por email y WhatsApp para coordinar el inicio de tu proceso de documentación.<br/><br/>
-      ¿Tenés dudas antes de pagar? <a href="https://wa.me/13034343224?text=Hola%2C+quiero+consultar+sobre+el+pago+antes+de+comenzar+el+proceso." target="_blank">Escribinos al WhatsApp →</a>
+      <strong data-i18n="pago.note.title">📩 ¿Qué pasa después del pago?</strong>
+      <span data-i18n="pago.note.text">Una vez confirmado el pago te contactamos dentro de las siguientes <strong>24 horas hábiles</strong> por email y WhatsApp para coordinar el inicio de tu proceso de documentación.<br/><br/>¿Tenés dudas antes de pagar? <a href="https://wa.me/13034343224?text=Hola%2C+quiero+consultar+sobre+el+pago+antes+de+comenzar+el+proceso." target="_blank">Escribinos al WhatsApp →</a></span>
     </div>
 
     <div class="pay-footer">
       <p>Trust Visa USA &nbsp;·&nbsp; info@trustvisausa.com &nbsp;·&nbsp; +1 (303) 434-3224</p>
-      <p>© 2026 Trust Visa USA. Todos los derechos reservados. &nbsp;|&nbsp; <a href="index.html">Volver al inicio</a></p>
+      <p>© 2026 Trust Visa USA. Todos los derechos reservados. &nbsp;|&nbsp; <a href="index.html" data-i18n="pago.footer.back">Volver al inicio</a></p>
     </div>
 
   </main>
@@ -415,10 +414,10 @@
   <script>
     let ppRendered = false;
 
-    function selectService(el, name) {
+    function selectService(el) {
       document.querySelectorAll('.service-opt').forEach(o => o.classList.remove('selected'));
       el.classList.add('selected');
-
+      const name = el.querySelector('strong').textContent + ' – ' + el.querySelector('span:not(.svc-check)').textContent;
       document.getElementById('pp-service-name').textContent = name;
       const section = document.getElementById('paypal-section');
       section.style.display = 'block';
