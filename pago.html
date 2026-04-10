@@ -10,19 +10,19 @@
   <script src="https://www.paypal.com/sdk/js?client-id=AXRyAtKv2MksApGgzrwwAXWc_fa0eoLrJwMh1j0_QWXcwhwDIawwgAqF7DVeGMs807Q4MK3IZf1NoWti&currency=USD&intent=capture" defer></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Jost', sans-serif; font-size: 17px; background: #F8FAFC; color: #1E293B; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Jost', sans-serif; font-size: 17px; background: linear-gradient(160deg, #0F1E5C 0%, #1A2A6B 45%, #1E3899 100%); min-height: 100vh; color: #1E293B; -webkit-font-smoothing: antialiased; }
     a { text-decoration: none; color: inherit; }
     h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
 
     /* HEADER */
     .pay-header {
-      background: white;
+      background: rgba(255,255,255,0.97);
       border-bottom: 3px solid #C8102E;
       padding: 14px 32px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 2px 12px rgba(26,42,107,0.08);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.18);
       position: sticky; top: 0; z-index: 100;
     }
     .pay-logo { display: flex; align-items: center; gap: 12px; }
@@ -37,22 +37,22 @@
 
     .pay-secure {
       display: inline-flex; align-items: center; gap: 8px;
-      background: #ECFDF5; border: 1px solid #BBF7D0;
+      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
       border-radius: 50px; padding: 7px 16px;
-      font-size: 0.8rem; font-weight: 600; color: #166534;
+      font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.95);
       margin-bottom: 28px;
     }
 
-    .pay-title { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 700; color: #1A2A6B; margin-bottom: 10px; line-height: 1.1; }
-    .pay-subtitle { color: #475569; font-size: 1rem; margin-bottom: 44px; line-height: 1.65; max-width: 600px; }
+    .pay-title { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 700; color: white; margin-bottom: 10px; line-height: 1.1; }
+    .pay-subtitle { color: rgba(255,255,255,0.75); font-size: 1rem; margin-bottom: 44px; line-height: 1.65; max-width: 600px; }
 
     /* SECTION LABELS */
     .pay-section-label {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 1.2px;
-      text-transform: uppercase; color: #94A3B8; margin-bottom: 14px;
+      text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 14px;
       display: flex; align-items: center; gap: 8px;
     }
-    .pay-section-label::after { content: ''; flex: 1; height: 1px; background: #E2E8F0; }
+    .pay-section-label::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.2); }
 
     /* SERVICE SELECTION */
     .service-select {
@@ -62,7 +62,7 @@
       margin-bottom: 44px;
     }
     .service-opt {
-      border: 2px solid #E2E8F0;
+      border: 2px solid rgba(255,255,255,0.25);
       border-radius: 12px;
       padding: 16px;
       cursor: pointer;
@@ -70,11 +70,14 @@
       display: flex;
       flex-direction: column;
       gap: 3px;
+      background: rgba(255,255,255,0.10);
     }
-    .service-opt:hover { border-color: #1A2A6B; background: #EEF1FB; }
-    .service-opt.selected { border-color: #1A2A6B; background: #EEF1FB; box-shadow: 0 0 0 3px rgba(26,42,107,0.08); }
-    .service-opt strong { color: #1A2A6B; font-size: 0.95rem; font-weight: 700; }
-    .service-opt span { color: #94A3B8; font-size: 0.78rem; }
+    .service-opt:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.18); }
+    .service-opt.selected { border-color: white; background: white; box-shadow: 0 4px 24px rgba(0,0,0,0.18); }
+    .service-opt strong { color: rgba(255,255,255,0.95); font-size: 0.95rem; font-weight: 700; }
+    .service-opt span { color: rgba(255,255,255,0.6); font-size: 0.78rem; }
+    .service-opt.selected strong { color: #1A2A6B; }
+    .service-opt.selected span { color: #94A3B8; }
     .service-opt .svc-check { display: none; color: #1A2A6B; font-size: 0.8rem; font-weight: 700; margin-top: 4px; }
     .service-opt.selected .svc-check { display: block; }
 
@@ -136,19 +139,20 @@
 
     /* CONFIRMATION NOTE */
     .pay-confirm-note {
-      background: #FFF7ED;
-      border: 1.5px solid #FED7AA;
+      background: rgba(255,255,255,0.12);
+      border: 1.5px solid rgba(255,255,255,0.25);
       border-radius: 14px;
       padding: 22px 26px;
       font-size: 0.9rem;
-      color: #92400E;
+      color: rgba(255,255,255,0.88);
       line-height: 1.7;
     }
-    .pay-confirm-note strong { display: block; font-size: 1rem; margin-bottom: 6px; color: #7C2D12; }
-    .pay-confirm-note a { color: #92400E; text-decoration: underline; font-weight: 600; }
+    .pay-confirm-note strong { display: block; font-size: 1rem; margin-bottom: 6px; color: white; }
+    .pay-confirm-note a { color: white; text-decoration: underline; font-weight: 600; }
 
     /* FOOTER */
-    .pay-footer { text-align: center; font-size: 0.78rem; color: #94A3B8; margin-top: 52px; padding-top: 24px; border-top: 1px solid #E2E8F0; line-height: 2; }
+    .pay-footer { text-align: center; font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-top: 52px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.15); line-height: 2; }
+    .pay-footer a { color: rgba(255,255,255,0.6); }
 
     /* PAYPAL QUICK PAY */
     .paypal-section { margin-bottom: 44px; }
