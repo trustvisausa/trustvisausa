@@ -590,18 +590,18 @@ p { font-size: 1rem; }
 .wc-promo-label {
   color: white;
   font-weight: 700;
-  font-size: 0.92rem;
+  font-size: 1rem;
   line-height: 1.2;
 }
 .wc-promo-desc {
   color: rgba(255,255,255,0.5);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   margin-top: 2px;
 }
 .wc-promo-price {
   color: #FFD700;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.55rem;
+  font-size: 1.85rem;
   font-weight: 700;
   white-space: nowrap;
   text-shadow: 0 0 20px rgba(255,215,0,0.4);
