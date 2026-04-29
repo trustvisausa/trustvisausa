@@ -675,6 +675,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ===== AGENDAR CONSULTA CLICK TRACKING =====
+  document.querySelectorAll('a[href*="agenda.html"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (typeof gtag === 'function') {
+        let label = 'general';
+        if (link.classList.contains('btn-nav'))      label = 'navbar';
+        else if (link.classList.contains('btn-primary')) label = 'hero';
+        else if (link.closest('.contacto'))           label = 'contact_section';
+        else if (link.closest('footer'))              label = 'footer';
+
+        gtag('event', 'agendar_consulta_click', {
+          event_category: 'conversion',
+          event_label: label,
+          page: window.location.pathname
+        });
+      }
+    });
+  });
+
+  // ===== WHATSAPP CLICK TRACKING =====
+  document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (typeof gtag === 'function') {
+        // Detect location context from classes or parent section
+        let label = 'general';
+        if (link.classList.contains('whatsapp-float')) label = 'floating_button';
+        else if (link.classList.contains('wc-float'))   label = 'worldcup_float';
+        else if (link.classList.contains('wc-promo-cta')) label = 'worldcup_promo';
+        else if (link.classList.contains('btn-wc-sm'))  label = 'worldcup_strip';
+        else if (link.classList.contains('btn-wc'))     label = 'worldcup_cta';
+        else if (link.classList.contains('alt-wa-cta')) label = 'pago_alt_methods';
+        else if (link.classList.contains('whatsapp-link')) label = 'contact_section';
+        else if (link.classList.contains('btn-whatsapp')) label = 'contact_button';
+        else if (link.closest('.pay-confirm-note'))     label = 'pago_confirm_note';
+        else if (link.closest('#pp-error'))             label = 'pago_payment_error';
+
+        gtag('event', 'whatsapp_click', {
+          event_category: 'engagement',
+          event_label: label,
+          page: window.location.pathname
+        });
+      }
+    });
+  });
+
   // ===== SCROLL REVEAL =====
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
